@@ -389,5 +389,99 @@ nav .fa-solid{
     display: block;
 }
 
+/*------------About Section--------------*/
+#about {
+    padding: 80px 0;
+    color: #ababab; /* Light text color for contrast */
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-me-row {
+    align-items: center; /* Vertically center the photo and text */
+}
 
+/* Column 1: Padded Photo Container */
+.about-col-1 {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center; /* Center photo within its column */
+    padding-right: 15px; /* Add initial space */
+}
+/* Column 1: Flexible, padded Photo */
+.about-col-1 img {
+    width: 100%; /* Key change: image flexible within column */
+    max-width: 400px; /* Optional: limit maximum image size */
+    border-radius: 20px; /* Standardized radius */
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.3); /* Optional subtle pink glow */
+    display: block;
+    margin: auto;
+}
+
+/* Column 2: Padded Text Container */
+.about-col-2.about-me-text {
+    flex-basis: 60%;
+    padding-left: 30px; /* Standardized uniform left padding */
+}
+.about-me-text .sub-title {
+    margin-top: 0; /* Ensure text is aligned with photo top */
+}
+.about-me-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Tabs and Content list items */
+.tab-titles {
+    display: flex;
+    margin: 20px 0 30px;
+}
+.tab-links {
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px; /* Better padding for underline */
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f; /* Consistent pink accent */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+.tab-links.active-link::after {
+    width: 60%; /* Slightly wider underline for prominence */
+}
+.tab-contents {
+    display: none; /* Initially hidden */
+}
+.tab-contents.active-tab {
+    display: block; /* Shown when active */
+}
+/* Target only lists within tab content to prevent styles bleeding */
+.tab-contents ul {
+    padding-left: 0;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 15px 0;
+    line-height: 1.6;
+    display: block;
+}
+/* Re-style content within spans inside lists */
+.tab-contents ul li span {
+    color: #ff004f; /* Make span text entirely pink */
+    font-size: 14px;
+    font-weight: 600; /* Bold the standardized spans */
+    margin-right: 10px; /* Space from list content */
+    display: inline;
+}
 
